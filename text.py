@@ -7,7 +7,7 @@ import random
 
 # 題目
 
-start = 1
+start = 2
 end = 50
 
 x = random.randint(start, end)
