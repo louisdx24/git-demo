@@ -9,52 +9,17 @@
 
 <body>
     <h1>JavaScript</h1>
-    <script>
-
-        document.write(Date());
-        //函式宣告
-        function getRandomInt(start, end) {
-            let x = Math.floor(Math.random() * end) + start;
-            return x
-        }
-
-        //使用陣列(串列)
-        //外迴圈(控制組數)產生五組號碼
-        rows = []
-        for (let i = 0; i < 5; i++) {
-            //內迴圈產生每組六個號碼
-            let numbers = [];
-            while (true) {
-                let xstart = 1;
-                let xend = 49;
-                let x = getRandomInt(xstart, xend);
-                if (!numbers.includes(x)) {
-                    numbers.push(x)
-                }
-                if (numbers.length == 6) {
-                    break;
-                }
-
-            }
-            //排序
-            function compare(a, b) {
-                return a - b; //b-a 為降序
-            }
-            numbers.sort(compare);
-
-            rows.push(numbers);
-        }
-
-        console.log(rows);
-
-        for (let i = 0; i < rows.length; i++) {
-            let result = rows[i].join(",")
-            console.log(result);
-            document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`);
-        }
+    <h2>本期預測號碼</h2>
+    <button>開獎！</button><br>
+    <div id="lottory">
 
 
-    </script>
+    </div>
+
+
+
+    <script src="./tempt.js"></script>
+
 </body>
 
 </html>
