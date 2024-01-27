@@ -1,4 +1,3 @@
-
 /** //使用let優於var
 prompt() 提示輸入
 let radius = prompt("請輸入半徑:");
@@ -87,51 +86,7 @@ for (let i = 0; i < 6; i++) {
     numbers.push(x);
 }
 **/
-//object > json
 
-document.write(Date());
-//函式宣告
-function getRandomInt(start, end) {
-    let x = Math.floor(Math.random() * end) + start;
-    return x
-}
-
-//使用陣列(串列)
-//外迴圈(控制組數)產生五組號碼
-rows = []
-for (let i = 0; i < 5; i++) {
-    //內迴圈產生每組六個號碼
-    let numbers = [];
-    while (true) {
-        let xstart = 1;
-        let xend = 49;
-        let x = getRandomInt(xstart, xend);
-        if (!numbers.includes(x)) {
-            numbers.push(x)
-        }
-        if (numbers.length == 6) {
-            break;
-        }
-
-    }
-    //排序
-    function compare(a, b) {
-        return a - b; //b-a 為降序
-    }
-    numbers.sort(compare);
-
-    rows.push(numbers);
-}
-
-console.log(rows);
-const lottory1 = document.querySelector("#lottory");
-
-for (let i = 0; i < rows.length; i++) {
-    let result = rows[i].join(",")
-    console.log(result);
-    lottory1.innerHTML += `<h3>第${i + 1}組號碼:${result}</h3><hr>`;
-    //document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`);
-}
 let user = {
     name: "Jerry",
     height: 178.6,
@@ -146,7 +101,3 @@ function getBMI(height, weight) {
     }
     return bmi.toFixed(2);
 }
-const h1 = document.querySelector("h1");
-console.log(lottory);
-h1.innerHTML = "<u>大樂透</u>";
-h1.style.color = "red";
